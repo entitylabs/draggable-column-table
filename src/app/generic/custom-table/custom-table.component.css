@@ -1,0 +1,36 @@
+.custom-table{
+  
+    display:flex;
+    flex-direction: row;
+}
+
+.columns_container{
+    position: absolute;
+    top:0;
+    height:200px;
+    z-index: 100;
+    pointer-events: none;
+
+
+}
+
+
+.column {
+
+    /* display: flex; */
+    color:black;
+    display:inline-block;
+    text-align: right;
+    top:15px;
+    margin-top:15px;
+    cursor: pointer;
+    pointer-events: all;
+    /* background-image: url("src/assets/drag.png"); */
+    background-repeat: no-repeat;
+}
+
+.drag_image{
+    width:20px;
+    height:20px;
+    pointer-events: none;
+}

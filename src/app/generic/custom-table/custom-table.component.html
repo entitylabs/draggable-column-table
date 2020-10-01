@@ -1,0 +1,29 @@
+
+<div class="custom-table">
+
+
+    <div class="columns_container">
+        <div class="column" *ngFor="let column of columns; let i = index" 
+        [ngStyle]="{'width':column.width+'px'}"
+        
+        (mouseup)="onColumnHover(column,i)"
+        (mousedown)="onColumnSelect(column,i)">
+        <img class="drag_image" src="/assets/drag.png">
+        </div>
+    </div>
+    <jqxGrid 
+	[selectionmode]="'checkbox'" 
+	[source]="source" 
+	[theme]="'material'" 
+	[autoheight]="true" 
+	[pageable]="true" 
+	[altrows]="true" 
+	[filterable]="true" 
+	[sortable]="true" 
+    [columns]="columns" 
+    [enablehover]="isHoverEnabled"
+    [cellhover]="cellhover"
+    [sortable]="isHoverEnabled"
+#grid>
+</jqxGrid>
+</div>

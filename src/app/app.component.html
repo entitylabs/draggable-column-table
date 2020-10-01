@@ -1,0 +1,12 @@
+<app-custom-table
+[selectedColumn]="selectedColumn"
+[selectedColumnNumber]="selectedColumnNumber"
+(columnOrderChangedEvent)="onColumnOrderChange($event)"></app-custom-table>
+
+
+<div class="column_container">
+    <li  class="list_item"*ngFor="let column of columns; let i=index" 
+    (mousedown)="onColumnSelect(column,i)">
+        {{column.text}}
+    </li>
+</div>
